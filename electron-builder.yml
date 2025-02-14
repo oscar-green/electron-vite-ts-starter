@@ -1,0 +1,4 @@
+appId: "com.oscar-green.electron-vite-ts-starter"
+
+asarUnpack: 
+ - "resources/**"

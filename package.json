@@ -1,0 +1,20 @@
+{
+  "name": "electron-vite-ts-starter",
+  "productName": "Electron Vite TS Starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Oscar Green",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "dist": "yarn build && electron-builder",
+    "build": "electron-vite build"
+  },
+  "devDependencies": {
+    "electron": "34.2.0",
+    "electron-builder": "26.0.6",
+    "electron-vite": "2.3.0",
+    "typescript": "5.7.3",
+    "vite": "6.1.0"
+  }
+}
