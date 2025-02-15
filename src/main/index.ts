@@ -12,14 +12,12 @@ function initWindow() {
   mainWindow.on("closed", () => (mainWindow = undefined))
 }
 
-
-
 app.on("ready", async () => {
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
     callback({
       responseHeaders: {
         ...details.responseHeaders,
-        "Content-Security-Policy": ["default-src 'self'; script-src 'self'"],
+        "Content-Security-Policy": ["default-src 'self'; script-src 'self'; img-src 'self' data:"],
       },
     })
   })

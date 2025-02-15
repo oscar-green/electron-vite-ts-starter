@@ -1,16 +1,10 @@
-html, body {
-  min-height: 100vh;
-  margin: 0;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
-  text-align: center;
-  color: white;
-  background-color: #1d2e38;
+  padding: 2rem;
+  color: #343434;
+  background-color: #87acb5;
 }

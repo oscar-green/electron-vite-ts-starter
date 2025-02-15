@@ -6,9 +6,8 @@ import { Channel } from "../preload/api"
 
 export function createRendererWindow() {
   const rendererWindow = new BrowserWindow({
-    width: 1096,
+    width: 1200,
     height: 700,
-    //icon: appIcon,
     webPreferences: {
       preload: path.join(__dirname, "../preload/index.js"),
     },

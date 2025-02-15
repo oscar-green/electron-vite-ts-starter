@@ -1,4 +1,5 @@
 import { Channel, RequestAPI } from "../preload/api"
+import logo from "./assets/logo.svg"
 
 // typings for the preload api
 declare global {
@@ -6,11 +7,14 @@ declare global {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
+  ;(document.getElementById("logo") as HTMLImageElement).src = logo
+
   MAIN_PROCESS.isDevelopment().then((isDevelopment) => {
-    const label = document.getElementById("is-development-label")
-    if (label) {
-      label.textContent = `Environment: ${isDevelopment ? "Development" : "Production"}`
-    }
+    ;(
+      document.getElementById("is-development-label") as HTMLParagraphElement
+    ).textContent = `Environment: ${
+      isDevelopment ? "Development" : "Production"
+    }`
   })
 
   MAIN_PROCESS.on(Channel.TOP_MENU_BUTTON, (message) => {
@@ -19,4 +23,3 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.body.appendChild(label)
   })
 })
- 
